@@ -55,23 +55,23 @@
       margin: auto;
     }
 
-    .about, .projects, .contact {
+    .about, .projects, .skills, .contact {
       text-align: center;
     }
 
-    .about h2, .projects h2, .contact h2 {
+    .about h2, .projects h2, .skills h2, .contact h2 {
       font-size: 2rem;
       margin-bottom: 20px;
     }
 
-    .projects-container {
+    .projects-container, .skills-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
 
-    .project-card {
+    .project-card, .skill-card {
       background: white;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -79,8 +79,19 @@
       transition: transform 0.3s;
     }
 
-    .project-card:hover {
+    .project-card:hover, .skill-card:hover {
       transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+
+    .skill-card p {
+      font-size: 1rem;
+      color: #555;
     }
 
     .contact form {
@@ -151,6 +162,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -177,6 +189,28 @@
     </div>
   </section>
 
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>HTML5</h3>
+        <p>Building semantic and accessible web structures.</p>
+      </div>
+      <div class="skill-card">
+        <h3>CSS3</h3>
+        <p>Creating responsive and visually appealing designs.</p>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic functionality to websites.</p>
+      </div>
+      <div class="skill-card">
+        <h3>PHP</h3>
+        <p>Developing server-side applications and dynamic content.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <h2>Contact Me</h2>
     <form id="contactForm">
@@ -194,7 +228,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Patel Lay. All rights reserved.</p>
+    <p>© 2025 Patel Lay. All rights reserved.</p>
   </footer>
 
   <script>
